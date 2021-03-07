@@ -1,0 +1,44 @@
+.form {
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+}
+
+.checkbox__btn {
+    display: none;
+}
+
+.checkbox__select {
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    border: 1px solid rebeccapurple;
+    position: relative;
+}
+
+.checkbox__select::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 500ms;
+}
+
+.checkbox__btn:checked + .checkbox__select::before {
+    opacity: 1;
+}
+
+.checkbox__text {
+    padding-left: 10px;
+
+}
